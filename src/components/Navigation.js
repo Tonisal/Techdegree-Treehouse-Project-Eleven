@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = (props) => {
 
@@ -10,7 +11,7 @@ const Navigation = (props) => {
             <ul>
                 {categories.map((category) =>
                     <li key={category.id}>
-                        <a href="#">{category.name}</a>
+                        <NavLink activeClassName="active" to={category.path}>{category.name}</NavLink>
                     </li>
                 )}
             </ul>
