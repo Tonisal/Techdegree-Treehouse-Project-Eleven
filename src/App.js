@@ -9,27 +9,25 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Gallery from './components/Gallery';
 import Error from './components/Error';
+import Home from './components/Home';
 
 class App extends Component {
 
     state = {
         categories: [
             {
-                name: 'beer',
-                path: '/beer',
-                active: false,
+                name: 'sunset',
+                path: '/sunset',
                 id: 1
             },
             {
-                name: 'more beer',
-                path: '/more-beer',
-                active: false,
+                name: 'cars',
+                path: '/cars',
                 id: 2
             },
             {
-                name: 'booze',
-                path: '/booze',
-                active: false,
+                name: 'science',
+                path: '/science',
                 id: 3
             }
         ],
@@ -38,12 +36,11 @@ class App extends Component {
     };
 
     componentDidMount() {
-        this.requestImagesFromFlickr();
+        this.requestImagesFromFlickr('random');
     }
 
-    requestImagesFromFlickr() {
-        const url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=36517e4fe86b9c5794dca50cb59433f6&tags=sunset&per_page=20&format=json&nojsoncallback=1';
-
+    requestImagesFromFlickr(thema) {
+        const url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=36517e4fe86b9c5794dca50cb59433f6&tags=' + thema + '&per_page=20&format=json&nojsoncallback=1';
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -54,7 +51,7 @@ class App extends Component {
 
     render() {
         const buttons = this.state.categories.map((category) =>
-            <Route path={category.path} render={() => <Gallery category={category.name} photos={this.state.photos}/>}/>
+            <Route path={category.path} render={() => <Gallery category={category.name} photos={this.state.photos} hello={this.requestImagesFromFlickr(category.name)}/>}/>
         );
         return (
             <BrowserRouter>
@@ -65,13 +62,12 @@ class App extends Component {
                             categories={this.state.categories}
                         />
                         <Switch>
+                            <Route exact path="/" component={Home} />}/>
                             {buttons}
                             <Route component={Error}/>
                         </Switch>
                     </div>
                 </div>
-
-
             </BrowserRouter>
         );
     }

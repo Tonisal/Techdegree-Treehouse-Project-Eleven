@@ -5,13 +5,14 @@ const Gallery = (props) => {
     const photos = props.photos;
 
     const photosMarkup = photos.map((photo) =>
-            <img src={'http://farm' + photo.farm +'.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '.jpg'}/>,
+            <li><img src={'http://farm' + photo.farm +'.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '.jpg'}/></li>,
     );
 
-
     return (
-        <div>
+        <div className="photo-container">
+            <ul>
             {photosMarkup}
+            </ul>
         </div>
     )
 }
