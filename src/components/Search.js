@@ -1,7 +1,7 @@
 //search bar and the functionality
 import React, { Component } from 'react';
 
-class Search extends Component {
+class Searchbar extends Component {
   /* State -->set searchText=''*/
   state = {
     searchText: ''
@@ -36,4 +36,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default Searchbar;
