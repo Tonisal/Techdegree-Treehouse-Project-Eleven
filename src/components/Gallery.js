@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import apiKey from '../apiKey';
 
-import Searchbar from './Search';
+import SearchForm from './SearchForm';
 import Photos from './Photos';
 
 class Gallery extends Component {
@@ -20,7 +20,7 @@ class Gallery extends Component {
 
 
     SearchForPhotos = (tag = this.props.tag) => {
-        axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tag}&per_page=12&format=json&nojsoncallback=1`)
+        axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tag}&per_page=20&format=json&nojsoncallback=1`)
             .then(response => {
                 this.setState({
                     photos: response.data.photos.photo,
@@ -30,19 +30,14 @@ class Gallery extends Component {
     }
 
     render() {
-        /*searchBar appear only if url=/search*/
-        let searchBar;
+        let input;
         if (this.state.url === '/search') {
-            /*Call Search component*/
-            /*onSearch to call on performSearch after input is received*/
-            searchBar = <Searchbar onSearch={this.SearchForPhotos}/>;
+            input = <SearchForm onSearch={this.SearchForPhotos}/>;
         }
 
         return (
             <div className="container">
-                {/*call searchBar*/}
-                {searchBar}
-                {/*call photo container and pass data -> photos , title, and loading*/}
+                {input}
                 <Photos photos={this.state.photos} title={this.state.title}/>
             </div>
         );

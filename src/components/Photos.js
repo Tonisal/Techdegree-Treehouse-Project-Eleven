@@ -1,12 +1,13 @@
 import React from 'react';
 
 const Photos = (props) => {
-    var photos = props.photos;
+    let photos = props.photos;
 
     if (photos.length > 0) {
         photos = photos.map(photo =>
             <li key={photo.id}><img
-                src={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}/>
+                src={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
+                alt={photo.tag}/>
             </li>
         );
     }
