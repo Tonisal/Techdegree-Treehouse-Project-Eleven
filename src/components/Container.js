@@ -6,7 +6,6 @@ import apiKey from '../config';
 
 //Components
 import Search from './Search';
-import MainNav from './MainNav';
 import PhotoContainer from './PhotoContainer';
 
 class Container extends Component {
