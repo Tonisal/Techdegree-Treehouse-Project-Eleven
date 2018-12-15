@@ -5,8 +5,7 @@ import {
   Switch
 } from 'react-router-dom';
 
-// Components
-import Container from './components/Container';
+import Gallery from './components/Gallery';
 import Error from './components/Error';
 import Home from './components/Home';
 import Navigation from "./components/Navigation";
@@ -17,16 +16,12 @@ class App extends Component {
       <BrowserRouter>
         <div className="container">
             <Navigation />
-      {/* returns only the first matching route*/}
           <Switch>
-      {/* route for the links provided*/}
             <Route exact path="/" render={() => <Home/>}/>
-            <Route path="/sunset" component={ () => <Container tag="Sunset" /> } />
-            <Route path="/cars" component={ () => <Container tag="Cars" /> } />
-            <Route path="/sciene" component={ () => <Container tag="Sciene" /> } />
-       {/* route for the search bar n pass url props*/}
-            <Route path="/search" component={ (props) => <Container tag="Random" url={props.match.url} /> } />
-       {/*Page not found if none of the links match the routes*/}
+            <Route path="/sunset" component={ () => <Gallery tag="Sunset" /> } />
+            <Route path="/cars" component={ () => <Gallery tag="Cars" /> } />
+            <Route path="/science" component={ () => <Gallery tag="Sciene" /> } />
+            <Route path="/search" component={ (props) => <Gallery tag="Random" url={props.match.url} /> } />
             <Route render={() => <Error/>} />
           </Switch>
         </div>

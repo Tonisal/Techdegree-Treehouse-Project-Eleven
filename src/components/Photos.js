@@ -5,7 +5,7 @@ import React from 'react';
 import Photo from './Photo';
 import PhotoNotFound from './PhotoNotFound';
 
-var PhotoContainer = function(props) {
+const Photos = (props) => {
   /*take data from props*/
   var result = props.data;
   let photos;
@@ -40,4 +40,4 @@ var PhotoContainer = function(props) {
   );
 }
 
-export default PhotoContainer;
+export default Photos;

@@ -1,14 +1,12 @@
-//the main container  -> searcBar, MainNav, PhotoContainer
-
 import React, { Component } from 'react';
 import axios from 'axios';
 import apiKey from '../config';
 
 //Components
 import Search from './Search';
-import PhotoContainer from './PhotoContainer';
+import Photos from './Photos';
 
-class Container extends Component {
+class Gallery extends Component {
   constructor(props) {
     super();
     /*Set initial state for photos, url and loading */
@@ -57,10 +55,10 @@ class Container extends Component {
         {/*call searchBar*/}
         {searchBar}
         {/*call photo container and pass data -> photos , title, and loading*/}
-        <PhotoContainer data={this.state.photos} title={this.state.title} loading={this.state.loading} />
+        <Photos data={this.state.photos} title={this.state.title} loading={this.state.loading} />
       </div>
     );
   }
 }
 
-export default Container;
+export default Gallery;
