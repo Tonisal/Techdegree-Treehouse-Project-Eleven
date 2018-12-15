@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import apiKey from '../config';
+import apiKey from '../apiKey';
 
 //Components
 import Search from './Search';
