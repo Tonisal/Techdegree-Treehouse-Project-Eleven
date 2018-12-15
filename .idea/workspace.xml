@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bf577b28-a8f1-47b6-ae10-d501d380d952" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageNotFound.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Photo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhotoNotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhotoNotFound.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Photos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Photos.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,20 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Photos.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Photo.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/PhotoNotFound.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="9" />
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -127,8 +130,8 @@
       <find>found</find>
       <find>&lt;MainNav /&gt;</find>
       <find>MainN</find>
-      <find>PageN</find>
       <find>Photoc</find>
+      <find>PageN</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -164,6 +167,8 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Gallery.js" />
         <option value="$PROJECT_DIR$/src/components/Photos.js" />
+        <option value="$PROJECT_DIR$/src/components/Photo.js" />
+        <option value="$PROJECT_DIR$/src/components/PhotoNotFound.js" />
       </list>
     </option>
   </component>
@@ -269,13 +274,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30923000" />
+    <option name="totallyTimeSpent" value="31067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="738" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31616595" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31616595" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -498,15 +503,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Photo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="9" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PageNotFound.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Photos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhotoNotFound.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
