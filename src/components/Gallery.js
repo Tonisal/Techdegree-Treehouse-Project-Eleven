@@ -44,7 +44,7 @@ class Gallery extends Component {
                 {/*call searchBar*/}
                 {searchBar}
                 {/*call photo container and pass data -> photos , title, and loading*/}
-                <Photos data={this.state.photos} title={this.state.title}/>
+                <Photos photos={this.state.photos} title={this.state.title}/>
             </div>
         );
     }

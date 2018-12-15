@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Photos = (props) => {
-    var photos = props.data;
+    var photos = props.photos;
 
     if (photos.length > 0) {
         photos = photos.map(photo =>
