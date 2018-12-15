@@ -3,7 +3,6 @@ import React from 'react';
 
 //Components
 import Photo from './Photo';
-import PhotoNotFound from './PhotoNotFound';
 
 const Photos = (props) => {
   /*take data from props*/
@@ -15,25 +14,15 @@ const Photos = (props) => {
     /*go through each object in array and display each object in photo*/
     /* pass props --> url of photo and key for id*/
     photos = result.map( photo =>
-      <Photo url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
-             key={photo.id}
-       />
+        <li key = {photo.id}><img src={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}/></li>
     );
-  } else {
-    /*if array.length = 0(don't receive array) , display PhotoNotFound*/
-    photos = <PhotoNotFound />;
   }
 
   return(
     <div className="photo-container">
       <h2>{props.title /*take props.title as title*/}</h2>
       <ul>
-        {
-    /*if loading= true, display 'loading', if not, call photos*/
-          (props.loading)
-          ? <p className="load">Loading...</p>
-          : photos
-        }
+        {photos}
       </ul>
     </div>
 
