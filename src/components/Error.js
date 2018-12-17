@@ -1,3 +1,5 @@
+// Component which gets rendered if there is no Route matching
+// Import dependencies
 import React from 'react';
 
 const Error = () => {

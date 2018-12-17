@@ -1,3 +1,5 @@
+// SearchForm: render the Input Field and save the tag the user is searching for.
+// Import dependencies
 import React, {Component} from 'react';
 
 class SearchForm extends Component {
@@ -5,10 +7,14 @@ class SearchForm extends Component {
         searchTag: ''
     }
 
+
+
+    /*Get value from search input and save them into state*/
     handleValueChange = (e) => {
         this.setState({searchTag: e.target.value});
     }
 
+    /* Call the search function 'OnSearch' if the user clicks on the submit button */
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.onSearch(this.state.searchTag);

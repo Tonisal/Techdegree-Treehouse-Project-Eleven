@@ -1,3 +1,4 @@
+// Import dependencies
 import React from 'react';
 
 const Photos = (props) => {
@@ -14,7 +15,7 @@ const Photos = (props) => {
 
     return (
         <div className="photo-container">
-            <h2>{props.title}</h2>
+            <h2>{props.headline}</h2>
             <ul>
                 {photos}
             </ul>
